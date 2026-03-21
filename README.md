@@ -15,7 +15,7 @@ github.io
     and English.
 
     Other languages I now include C++/C, java, python & javascript, which have
-    been my four main focuses.
+    ween my four main focuses.
 
 
 # Version Log (ENG)
