@@ -1,63 +1,3 @@
-/*!
-* Start Bootstrap - Creative v7.0.7
-*/
-
-window.addEventListener('DOMContentLoaded', event => {
-
-    // Navbar shrink function
-    var navbarShrink = function () {
-
-        const navbarCollapsible = document.body.querySelector('#mainNav');
-
-        if (!navbarCollapsible) {
-            return;
-        }
-
-        if (window.scrollY === 0) {
-            navbarCollapsible.classList.remove('navbar-shrink');
-        } else {
-            navbarCollapsible.classList.add('navbar-shrink');
-        }
-    };
-
-    navbarShrink();
-
-    document.addEventListener('scroll', navbarShrink);
-
-    const mainNav = document.body.querySelector('#mainNav');
-
-    if (mainNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#mainNav',
-            rootMargin: '0px 0px -40%',
-        });
-    }
-
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-
-    responsiveNavItems.map(function (responsiveNavItem) {
-
-        responsiveNavItem.addEventListener('click', () => {
-
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-
-        });
-
-    });
-
-    new SimpleLightbox({
-        elements: '#portfolio a.portfolio-box'
-    });
-
-});
-
-
 /* =========================
    LANGUAGE TOGGLE
 ========================= */
@@ -67,37 +7,41 @@ const translations = {
     en: {
 
         about: "About",
-        services: "Services",
-        portfolio: "Portfolio",
+        timeline: "Timeline",
         projects: "Projects",
         contact: "Contact",
 
-        discover: "Find Out More",
+        intro:
+            "Passionate developer focused on backend, automation and scalable web solutions.",
 
-        timelineTitle: "Checkout my timeline!",
+        aboutTitle: "About Me",
 
-        timelineText:
-            "Lets start with my wonderful time at Universidad Complutense de Madrid",
+        aboutText:
+            "I am a passionate software developer with strong interest in backend development, scalable systems and modern web applications.",
 
-        getStarted: "Get Started!"
+        timelineTitle: "My Journey",
+
+        projectsTitle: "My Projects"
     },
 
     es: {
 
         about: "Sobre mí",
-        services: "Servicios",
-        portfolio: "Portfolio",
+        timeline: "Recorrido",
         projects: "Proyectos",
         contact: "Contacto",
 
-        discover: "Descubrir más",
+        intro:
+            "Desarrollador apasionado especializado en backend, automatización y soluciones web escalables.",
 
-        timelineTitle: "¡Mira mi recorrido!",
+        aboutTitle: "Sobre mí",
 
-        timelineText:
-            "Empecemos con mi maravillosa etapa en la Universidad Complutense de Madrid",
+        aboutText:
+            "Soy un desarrollador apasionado por el backend, los sistemas escalables y las aplicaciones web modernas.",
 
-        getStarted: "¡Comenzar!"
+        timelineTitle: "Mi recorrido",
+
+        projectsTitle: "Mis proyectos"
     }
 };
 
@@ -112,37 +56,76 @@ document
                 ? "es"
                 : "en";
 
-        document.documentElement.lang = currentLanguage;
+        document.documentElement.lang =
+            currentLanguage;
 
-        const t = translations[currentLanguage];
+        const t =
+            translations[currentLanguage];
 
-        // NAVBAR
-        document.querySelector('a[href="#about"]').textContent =
+        document.querySelector(".nav-about").textContent =
             t.about;
 
-        document.querySelector('a[href="#services"]').textContent =
-            t.services;
+        document.querySelector(".nav-timeline").textContent =
+            t.timeline;
 
-        document.querySelector('a[href="#portfolio"]').textContent =
-            t.portfolio;
-
-        document.querySelector('a[href="#myproyects"]').textContent =
+        document.querySelector(".nav-projects").textContent =
             t.projects;
 
-        document.querySelector('a[href="#contact"]').textContent =
+        document.querySelector(".nav-contact").textContent =
             t.contact;
 
-        // HERO BUTTON
-        document.getElementById("discover-btn").textContent =
-            t.discover;
+        document.querySelector(".intro-text").textContent =
+            t.intro;
 
-        // ABOUT SECTION
-        document.getElementById("timeline-title").textContent =
+        document.querySelector(".about-title").textContent =
+            t.aboutTitle;
+
+        document.querySelector(".about-text").textContent =
+            t.aboutText;
+
+        document.querySelector(".timeline-title").textContent =
             t.timelineTitle;
 
-        document.getElementById("timeline-text").textContent =
-            t.timelineText;
-
-        document.getElementById("start-btn").textContent =
-            t.getStarted;
+        document.querySelector(".projects-title").textContent =
+            t.projectsTitle;
     });
+
+/* =========================
+   PROJECT FILTERS
+========================= */
+
+const filterButtons =
+    document.querySelectorAll(".filter-btn");
+
+const projectCards =
+    document.querySelectorAll(".project-card");
+
+filterButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        filterButtons.forEach(btn =>
+            btn.classList.remove("active")
+        );
+
+        button.classList.add("active");
+
+        const filter =
+            button.getAttribute("data-filter");
+
+        projectCards.forEach(card => {
+
+            if (
+                filter === "all" ||
+                card.dataset.category.includes(filter)
+            ) {
+
+                card.style.display = "block";
+
+            } else {
+
+                card.style.display = "none";
+            }
+        });
+    });
+});
