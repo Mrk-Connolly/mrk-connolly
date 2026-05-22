@@ -11324,4 +11324,15 @@ label:last-child span {
   border-radius: 0 .375em .375em 0;
 }
 
+#language-toggle {
+    border-radius: 30px;
+    padding: 8px 18px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+#language-toggle:hover {
+    transform: scale(1.05);
+}
+
 }
