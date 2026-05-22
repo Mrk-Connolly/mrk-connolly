@@ -21,7 +21,11 @@ const translations = {
 
         timelineTitle: "My Journey",
 
-        projectsTitle: "My Projects"
+        projectsTitle: "My Projects",
+
+        roleFilterTitle: "Category",
+
+        languageFilterTitle: "Languages"
     },
 
     es: {
@@ -41,7 +45,11 @@ const translations = {
 
         timelineTitle: "Mi recorrido",
 
-        projectsTitle: "Mis proyectos"
+        projectsTitle: "Mis proyectos",
+
+        roleFilterTitle: "Categoría",
+
+        languageFilterTitle: "Lenguajes"
     }
 };
 
@@ -88,11 +96,20 @@ document
 
         document.querySelector(".projects-title").textContent =
             t.projectsTitle;
+
+        document.querySelector(".role-filter-title").textContent =
+            t.roleFilterTitle;
+
+        document.querySelector(".language-filter-title").textContent =
+            t.languageFilterTitle;
     });
 
 /* =========================
-   PROJECT FILTERS
+   FILTER SYSTEM
 ========================= */
+
+let activeRole = "all";
+let activeLanguage = "all";
 
 const filterButtons =
     document.querySelectorAll(".filter-btn");
@@ -104,28 +121,62 @@ filterButtons.forEach(button => {
 
     button.addEventListener("click", () => {
 
-        filterButtons.forEach(btn =>
-            btn.classList.remove("active")
-        );
+        const filterType =
+            button.dataset.filterType;
+
+        const filterValue =
+            button.dataset.filter;
+
+        // REMOVE ACTIVE ONLY IN GROUP
+        document
+            .querySelectorAll(
+                `.filter-btn[data-filter-type="${filterType}"]`
+            )
+            .forEach(btn =>
+                btn.classList.remove("active")
+            );
 
         button.classList.add("active");
 
-        const filter =
-            button.getAttribute("data-filter");
+        // SAVE FILTER
+        if (filterType === "role") {
 
-        projectCards.forEach(card => {
+            activeRole = filterValue;
 
-            if (
-                filter === "all" ||
-                card.dataset.category.includes(filter)
-            ) {
+        } else {
 
-                card.style.display = "block";
+            activeLanguage = filterValue;
+        }
 
-            } else {
-
-                card.style.display = "none";
-            }
-        });
+        filterProjects();
     });
 });
+
+function filterProjects() {
+
+    projectCards.forEach(card => {
+
+        const role =
+            card.dataset.role;
+
+        const language =
+            card.dataset.language;
+
+        const roleMatch =
+            activeRole === "all" ||
+            role === activeRole;
+
+        const languageMatch =
+            activeLanguage === "all" ||
+            language === activeLanguage;
+
+        if (roleMatch && languageMatch) {
+
+            card.style.display = "block";
+
+        } else {
+
+            card.style.display = "none";
+        }
+    });
+}
