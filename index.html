@@ -1,96 +1,473 @@
-<!-- =========================
-     FILTERS
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="filters-container">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- ROLE FILTER -->
-    <div class="filter-group">
+    <!-- =========================
+         CAMBIA AQUÍ EL TÍTULO
+    ========================== -->
+    <title>Tu Nombre | Portfolio</title>
 
-        <h4 class="filter-title role-filter-title">
-            Category
-        </h4>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <div class="filters">
+    <!-- FontAwesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
-            <button class="filter-btn active"
-                data-filter-type="role"
-                data-filter="all">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
 
-                All
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top custom-navbar">
+
+        <div class="container">
+
+            <!-- CAMBIA TU NOMBRE -->
+            <a class="navbar-brand fw-bold" href="#">
+                TU NOMBRE
+            </a>
+
+            <button class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
             </button>
 
-            <button class="filter-btn"
-                data-filter-type="role"
-                data-filter="application">
+            <div class="collapse navbar-collapse"
+                id="navbarNav">
 
-                Application
-            </button>
+                <ul class="navbar-nav ms-auto">
 
-            <button class="filter-btn"
-                data-filter-type="role"
-                data-filter="ecommerce">
+                    <li class="nav-item">
+                        <a class="nav-link nav-about" href="#about">
+                            About
+                        </a>
+                    </li>
 
-                Ecommerce
-            </button>
+                    <li class="nav-item">
+                        <a class="nav-link nav-timeline" href="#timeline">
+                            Timeline
+                        </a>
+                    </li>
 
-            <button class="filter-btn"
-                data-filter-type="role"
-                data-filter="webpage">
+                    <li class="nav-item">
+                        <a class="nav-link nav-projects" href="#projects">
+                            Projects
+                        </a>
+                    </li>
 
-                Webpage
-            </button>
+                    <li class="nav-item">
+                        <a class="nav-link nav-contact" href="#footer">
+                            Contact
+                        </a>
+                    </li>
+
+                </ul>
+
+                <!-- BOTÓN IDIOMA -->
+                <button id="language-toggle"
+                    class="btn btn-success ms-3">
+
+                    ES / EN
+                </button>
+
+            </div>
 
         </div>
 
-    </div>
+    </nav>
 
-    <!-- LANGUAGE FILTER -->
-    <div class="filter-group">
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
 
-        <h4 class="filter-title language-filter-title">
-            Languages
-        </h4>
+    <section class="hero">
 
-        <div class="filters">
+        <div class="container">
 
-            <button class="filter-btn active"
-                data-filter-type="language"
-                data-filter="all">
+            <div class="row align-items-center min-vh-100">
 
-                All
-            </button>
+                <!-- FOTO -->
+                <div class="col-lg-5 text-center">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="python">
+                    <!-- =========================
+                         CAMBIA TU FOTO
+                    ========================== -->
 
-                Python
-            </button>
+                    <img src="assets/img/profile.jpg"
+                        class="profile-image"
+                        alt="Profile">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="javascript">
+                </div>
 
-                JavaScript
-            </button>
+                <!-- INFO -->
+                <div class="col-lg-7 hero-content">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="java">
+                    <!-- CAMBIA TU NOMBRE -->
+                    <h1 class="hero-name">
+                        TU NOMBRE
+                    </h1>
 
-                Java
-            </button>
+                    <!-- CAMBIA TU TÍTULO -->
+                    <h2 class="hero-role">
+                        Full Stack Developer
+                    </h2>
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="php">
+                    <!-- CAMBIA TU DESCRIPCIÓN -->
+                    <p class="hero-description intro-text">
 
-                PHP
-            </button>
+                        Passionate developer focused on
+                        backend, automation and scalable web solutions.
+
+                    </p>
+
+                    <!-- CAMBIA TU TELÉFONO -->
+                    <p class="hero-info">
+                        <i class="fa-solid fa-phone"></i>
+                        +34 600 000 000
+                    </p>
+
+                    <!-- CAMBIA TU EMAIL -->
+                    <p class="hero-info">
+                        <i class="fa-solid fa-envelope"></i>
+                        yourmail@gmail.com
+                    </p>
+
+                    <!-- BOTONES -->
+                    <div class="hero-buttons">
+
+                        <!-- CAMBIA TU LINKEDIN -->
+                        <a href="#"
+                            class="btn btn-success me-3"
+                            target="_blank">
+
+                            LinkedIn
+                        </a>
+
+                        <!-- CAMBIA TU GITHUB -->
+                        <a href="#"
+                            class="btn btn-outline-light"
+                            target="_blank">
+
+                            GitHub
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
 
         </div>
 
-    </div>
+    </section>
 
-</div>
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
+    <section id="about"
+        class="section-dark">
+
+        <div class="container">
+
+            <h2 class="section-title about-title">
+                About Me
+            </h2>
+
+            <!-- =========================
+                 CAMBIA TU DESCRIPCIÓN
+            ========================== -->
+
+            <p class="about-description about-text">
+
+                I am a passionate software developer with
+                strong interest in backend development,
+                scalable systems and modern web applications.
+                I enjoy building clean and professional solutions.
+
+            </p>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         TIMELINE
+    ========================== -->
+
+    <section id="timeline"
+        class="section-dark">
+
+        <div class="container">
+
+            <h2 class="section-title timeline-title">
+                My Journey
+            </h2>
+
+            <div class="timeline">
+
+                <!-- =========================
+                     CAMBIA LOS AÑOS Y TEXTOS
+                ========================== -->
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2021</h3>
+                        <p>
+                            Started Computer Science at Universidad Complutense de Madrid.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022</h3>
+                        <p>
+                            Built my first frontend projects using HTML, CSS and JavaScript.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>
+                            Started backend development with Python and Flask.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2024</h3>
+                        <p>
+                            Developed full stack applications and APIs.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section id="projects"
+        class="section-dark">
+
+        <div class="container">
+
+            <h2 class="section-title projects-title">
+                My Projects
+            </h2>
+
+            <!-- =========================
+                 FILTERS
+            ========================= -->
+
+            <div class="filters-container">
+
+                <!-- ROLE FILTER -->
+                <div class="filter-group">
+
+                    <h4 class="filter-title role-filter-title">
+                        Category
+                    </h4>
+
+                    <div class="filters">
+
+                        <button class="filter-btn active"
+                            data-filter-type="role"
+                            data-filter="all">
+
+                            All
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="role"
+                            data-filter="application">
+
+                            Application
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="role"
+                            data-filter="ecommerce">
+
+                            Ecommerce
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="role"
+                            data-filter="webpage">
+
+                            Webpage
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- LANGUAGE FILTER -->
+                <div class="filter-group">
+
+                    <h4 class="filter-title language-filter-title">
+                        Languages
+                    </h4>
+
+                    <div class="filters">
+
+                        <button class="filter-btn active"
+                            data-filter-type="language"
+                            data-filter="all">
+
+                            All
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="python">
+
+                            Python
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="javascript">
+
+                            JavaScript
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="java">
+
+                            Java
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="php">
+
+                            PHP
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- PROYECTOS -->
+            <div class="row g-4">
+
+                <!-- =========================
+                     PROYECTO 1
+                ========================== -->
+
+                <div class="col-lg-4 project-card"
+                    data-role="webpage"
+                    data-language="javascript">
+
+                    <div class="project-box">
+
+                        <h3>Portfolio Website</h3>
+
+                        <p class="project-description">
+                            Responsive portfolio website
+                            with animations and modern UI.
+                        </p>
+
+                        <span class="project-tag">
+                            Webpage
+                        </span>
+
+                        <span class="project-tag">
+                            JavaScript
+                        </span>
+
+                    </div>
+
+                </div>
+
+                <!-- =========================
+                     PROYECTO 2
+                ========================== -->
+
+                <div class="col-lg-4 project-card"
+                    data-role="application"
+                    data-language="python">
+
+                    <div class="project-box">
+
+                        <h3>REST API</h3>
+
+                        <p class="project-description">
+                            Backend API built using Flask
+                            and MySQL database.
+                        </p>
+
+                        <span class="project-tag">
+                            Application
+                        </span>
+
+                        <span class="project-tag">
+                            Python
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer id="footer">
+
+        <!-- CAMBIA TU INFORMACIÓN -->
+        <p>
+            📍 Madrid, Spain
+        </p>
+
+        <p>
+            📞 +34 600 000 000
+        </p>
+
+        <p>
+            ✉️ yourmail@gmail.com
+        </p>
+
+    </footer>
+
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JS -->
+    <script src="js/scripts.js"></script>
+
+</body>
+
+</html>
