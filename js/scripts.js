@@ -55,54 +55,68 @@ const translations = {
 
 let currentLanguage = "en";
 
-document
-    .getElementById("language-toggle")
-    .addEventListener("click", () => {
+const langToggle =
+    document.getElementById("language-toggle");
 
-        currentLanguage =
-            currentLanguage === "en"
-                ? "es"
-                : "en";
+const langLabels =
+    langToggle.querySelectorAll(".lang-label");
 
-        document.documentElement.lang =
-            currentLanguage;
+langToggle.addEventListener("click", () => {
 
-        const t =
-            translations[currentLanguage];
+    currentLanguage =
+        currentLanguage === "en"
+            ? "es"
+            : "en";
 
-        document.querySelector(".nav-about").textContent =
-            t.about;
+    document.documentElement.lang =
+        currentLanguage;
 
-        document.querySelector(".nav-timeline").textContent =
-            t.timeline;
+    if (currentLanguage === "es") {
+        langToggle.classList.add("es");
+        langLabels[0].classList.remove("active");
+        langLabels[1].classList.add("active");
+    } else {
+        langToggle.classList.remove("es");
+        langLabels[0].classList.add("active");
+        langLabels[1].classList.remove("active");
+    }
 
-        document.querySelector(".nav-projects").textContent =
-            t.projects;
+    const t =
+        translations[currentLanguage];
 
-        document.querySelector(".nav-contact").textContent =
-            t.contact;
+    document.querySelector(".nav-about").textContent =
+        t.about;
 
-        document.querySelector(".intro-text").textContent =
-            t.intro;
+    document.querySelector(".nav-timeline").textContent =
+        t.timeline;
 
-        document.querySelector(".about-title").textContent =
-            t.aboutTitle;
+    document.querySelector(".nav-projects").textContent =
+        t.projects;
 
-        document.querySelector(".about-text").textContent =
-            t.aboutText;
+    document.querySelector(".nav-contact").textContent =
+        t.contact;
 
-        document.querySelector(".timeline-title").textContent =
-            t.timelineTitle;
+    document.querySelector(".intro-text").textContent =
+        t.intro;
 
-        document.querySelector(".projects-title").textContent =
-            t.projectsTitle;
+    document.querySelector(".about-title").textContent =
+        t.aboutTitle;
 
-        document.querySelector(".role-filter-title").textContent =
-            t.roleFilterTitle;
+    document.querySelector(".about-text").textContent =
+        t.aboutText;
 
-        document.querySelector(".language-filter-title").textContent =
-            t.languageFilterTitle;
-    });
+    document.querySelector(".timeline-title").textContent =
+        t.timelineTitle;
+
+    document.querySelector(".projects-title").textContent =
+        t.projectsTitle;
+
+    document.querySelector(".role-filter-title").textContent =
+        t.roleFilterTitle;
+
+    document.querySelector(".language-filter-title").textContent =
+        t.languageFilterTitle;
+});
 
 /* =========================
    FILTER SYSTEM
@@ -127,7 +141,6 @@ filterButtons.forEach(button => {
         const filterValue =
             button.dataset.filter;
 
-        // REMOVE ACTIVE ONLY IN GROUP
         document
             .querySelectorAll(
                 `.filter-btn[data-filter-type="${filterType}"]`
@@ -138,7 +151,6 @@ filterButtons.forEach(button => {
 
         button.classList.add("active");
 
-        // SAVE FILTER
         if (filterType === "role") {
 
             activeRole = filterValue;
@@ -180,3 +192,26 @@ function filterProjects() {
         }
     });
 }
+
+/* =========================
+   TIMELINE SCROLL ANIMATION
+========================= */
+
+const timelineItems =
+    document.querySelectorAll(".timeline-item");
+
+const timelineObserver = new IntersectionObserver(
+    (entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("visible");
+                timelineObserver.unobserve(entry.target);
+            }
+        });
+    },
+    { threshold: 0.2 }
+);
+
+timelineItems.forEach(item => {
+    timelineObserver.observe(item);
+});
