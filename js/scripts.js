@@ -31,6 +31,7 @@ const translations = {
             all: "All",
             program: "Program",
             ecommerce: "Ecommerce",
+            games: "Games",
             webpage: "Webpage"
         },
 
@@ -75,6 +76,7 @@ const translations = {
             all: "Todos",
             program: "Programa",
             ecommerce: "Ecommerce",
+            games: "Juegos",
             webpage: "Página web"
         },
 
@@ -210,8 +212,12 @@ function filterProjects() {
         const role =
             card.dataset.role;
 
-        const language =
-            card.dataset.language;
+        // support multiple languages per card (comma-separated)
+        const languageRaw = card.dataset.languages || card.dataset.language || "";
+        const languages = languageRaw
+            .split(',')
+            .map(l => l.trim().toLowerCase())
+            .filter(Boolean);
 
         const roleMatch =
             activeRole === "all" ||
@@ -219,14 +225,11 @@ function filterProjects() {
 
         const languageMatch =
             activeLanguage === "all" ||
-            language === activeLanguage;
+            languages.includes(activeLanguage);
 
         if (roleMatch && languageMatch) {
-
             card.style.display = "block";
-
         } else {
-
             card.style.display = "none";
         }
     });
