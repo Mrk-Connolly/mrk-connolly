@@ -52,6 +52,8 @@ body {
     color: #2e3d31 !important;
 
     transition: 0.3s;
+
+    text-decoration: none;
 }
 
 .nav-link:hover {

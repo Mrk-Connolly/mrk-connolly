@@ -25,7 +25,27 @@ const translations = {
 
         roleFilterTitle: "Category",
 
-        languageFilterTitle: "Languages"
+        languageFilterTitle: "Languages",
+
+        roleFilterOptions: {
+            all: "All",
+            program: "Program",
+            ecommerce: "Ecommerce",
+            webpage: "Webpage"
+        },
+
+        languageFilterOptions: {
+            all: "All",
+            python: "Python",
+            javascript: "JavaScript",
+            java: "Java",
+            minizinc: "MiniZinc",
+            cpp: "C / C++",
+            sql: "SQL",
+            node: "Node",
+            mongodb: "MongoDB",
+            golang: "Golang"
+        }
     },
 
     es: {
@@ -49,7 +69,27 @@ const translations = {
 
         roleFilterTitle: "Categoría",
 
-        languageFilterTitle: "Lenguajes"
+        languageFilterTitle: "Lenguajes",
+
+        roleFilterOptions: {
+            all: "Todos",
+            program: "Programa",
+            ecommerce: "Ecommerce",
+            webpage: "Página web"
+        },
+
+        languageFilterOptions: {
+            all: "Todos",
+            python: "Python",
+            javascript: "JavaScript",
+            java: "Java",
+            minizinc: "MiniZinc",
+            cpp: "C / C++",
+            sql: "SQL",
+            node: "Node",
+            mongodb: "MongoDB",
+            golang: "Golang"
+        }
     }
 };
 
@@ -102,6 +142,17 @@ languageToggle.addEventListener("change", () => {
 
         document.querySelector(".language-filter-title").textContent =
             t.languageFilterTitle;
+
+        document.querySelectorAll(".filter-btn").forEach(button => {
+            const type = button.dataset.filterType;
+            const value = button.dataset.filter;
+
+            if (type === "role") {
+                button.textContent = t.roleFilterOptions[value];
+            } else if (type === "language") {
+                button.textContent = t.languageFilterOptions[value];
+            }
+        });
     });
 
 /* =========================
