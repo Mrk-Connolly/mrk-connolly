@@ -8,218 +8,216 @@
 </head>
 <body>
     <nav class="custom-navbar">
-        <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex-wrap:wrap;gap:18px;">
+        <div class="nav-inner">
             <div class="navbar-brand">Marcos Connolly</div>
-            <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+            <div class="nav-links">
                 <a class="nav-link nav-about" href="#about">About</a>
                 <a class="nav-link nav-timeline" href="#timeline">Timeline</a>
                 <a class="nav-link nav-projects" href="#projects">Projects</a>
                 <a class="nav-link nav-contact" href="#contact">Contact</a>
                 <label class="switch">
-                    <div class="filters-container">
+                    <input id="language-toggle" type="checkbox" />
+                    <span class="slider"></span>
+                    <span class="switch-text">EN</span>
+                </label>
+            </div>
+        </div>
+    </nav>
 
-                        <!-- ROLE FILTER -->
-                        <div class="filter-group">
+    <main>
+        <section class="hero section-dark">
+            <div class="hero-inner">
+                <img class="profile-image" src="assets/img/portfolio/thumbnails/1.jpg" alt="Profile image" />
+                <div class="hero-content">
+                    <h1 class="hero-name">Marcos Connolly</h1>
+                    <p class="hero-role">Backend Developer & Automation Engineer</p>
+                    <p class="hero-description intro-text">Passionate developer focused on backend, automation and scalable web solutions.</p>
+                    <div class="hero-info"><span style="color:#8fc69d;">•</span> Based in Belfast, Northern Ireland</div>
+                    <div class="hero-info"><span style="color:#8fc69d;">•</span> Python, JavaScript, Java, Go, SQL</div>
+                </div>
+            </div>
+        </section>
 
-                            <h4 class="filter-title role-filter-title">
-                                Category
-                            </h4>
+        <section id="about" class="section-dark">
+            <div class="section-title about-title">About Me</div>
+            <p class="about-description about-text">I am a passionate software developer with strong interest in backend development, scalable systems and modern web applications.</p>
+        </section>
 
-                            <div class="filters">
+        <section id="timeline" class="section-dark">
+            <div class="section-title timeline-title">My Journey</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2024</h3>
+                        <p>Building backend services, automation tools, and scalable web solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>Focused on internships and personal projects using Python and JavaScript.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2022</h3>
+                        <p>Developed data-driven tools and API integrations for small teams.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2021</h3>
+                        <p>Delivered academic projects using C/C++, SQL, and algorithmic problem solving.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2020</h3>
+                        <p>Started building software projects and learning web development fundamentals.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                                <button class="filter-btn active"
-                                    data-filter-type="role"
-                                    data-filter="all">
+        <section id="projects" class="section-dark">
+            <div class="section-title projects-title">My Projects</div>
 
-                                    All
-                                </button>
+            <div class="filters-container">
 
-                                <button class="filter-btn"
-                                    data-filter-type="role"
-                                    data-filter="program">
+                <!-- ROLE FILTER -->
+                <div class="filter-group">
 
-                                    Program
-                                </button>
+                    <h4 class="filter-title role-filter-title">
+                        Category
+                    </h4>
 
-                                <button class="filter-btn"
-                                    data-filter-type="role"
-                                    data-filter="ecommerce">
+                    <div class="filters">
 
-                                    Ecommerce
-                                </button>
+                        <button class="filter-btn active"
+                            data-filter-type="role"
+                            data-filter="all">
 
-                                <button class="filter-btn"
-                                    data-filter-type="role"
-                                    data-filter="webpage">
+                            All
+                        </button>
 
-                                    Webpage
-                                </button>
+                        <button class="filter-btn"
+                            data-filter-type="role"
+                            data-filter="program">
 
-                                <button class="filter-btn"
-                                    data-filter-type="role"
-                                    data-filter="games">
+                            Program
+                        </button>
 
-                                    Games
-                                </button>
+                        <button class="filter-btn"
+                            data-filter-type="role"
+                            data-filter="ecommerce">
 
-                            </div>
+                            Ecommerce
+                        </button>
 
-                        </div>
+                        <button class="filter-btn"
+                            data-filter-type="role"
+                            data-filter="webpage">
 
-                        <!-- LANGUAGE FILTER -->
-                        <div class="filter-group">
+                            Webpage
+                        </button>
 
-                            <h4 class="filter-title language-filter-title">
-                                Languages
-                            </h4>
+                        <button class="filter-btn"
+                            data-filter-type="role"
+                            data-filter="games">
 
-                            <div class="filters">
-
-                                <button class="filter-btn active"
-                                    data-filter-type="language"
-                                    data-filter="all">
-
-                                    All
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="python">
-
-                                    Python
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="javascript">
-
-                                    JavaScript
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="java">
-
-                                    Java
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="minizinc">
-
-                                    MiniZinc
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="cpp">
-
-                                    C / C++
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="sql">
-
-                                    SQL
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="node">
-
-                                    Node
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="mongodb">
-
-                                    MongoDB
-                                </button>
-
-                                <button class="filter-btn"
-                                    data-filter-type="language"
-                                    data-filter="golang">
-
-                                    Golang
-                                </button>
-
-                            </div>
-
-                        </div>
+                            Games
+                        </button>
 
                     </div>
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="python">
 
-                Python
-            </button>
+                </div>
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="javascript">
+                <!-- LANGUAGE FILTER -->
+                <div class="filter-group">
 
-                JavaScript
-            </button>
+                    <h4 class="filter-title language-filter-title">
+                        Languages
+                    </h4>
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="java">
+                    <div class="filters">
 
-                Java
-            </button>
+                        <button class="filter-btn active"
+                            data-filter-type="language"
+                            data-filter="all">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="minizinc">
+                            All
+                        </button>
 
-                MiniZinc
-            </button>
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="python">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="cpp">
+                            Python
+                        </button>
 
-                C / C++
-            </button>
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="javascript">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="sql">
+                            JavaScript
+                        </button>
 
-                SQL
-            </button>
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="java">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="node">
+                            Java
+                        </button>
 
-                Node
-            </button>
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="minizinc">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="mongodb">
+                            MiniZinc
+                        </button>
 
-                MongoDB
-            </button>
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="cpp">
 
-            <button class="filter-btn"
-                data-filter-type="language"
-                data-filter="golang">
+                            C / C++
+                        </button>
 
-                Golang
-            </button>
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="sql">
 
-        </div>
+                            SQL
+                        </button>
 
-    </div>
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="node">
 
-</div>
+                            Node
+                        </button>
 
-            <div style="display:grid;gap:24px;max-width:1200px;margin:0 auto;padding:0 20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="mongodb">
+
+                            MongoDB
+                        </button>
+
+                        <button class="filter-btn"
+                            data-filter-type="language"
+                            data-filter="golang">
+
+                            Golang
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="projects-grid">
                 <div class="project-card project-box" data-role="program" data-language="python,cpp">
                     <h3>Inventory Automator</h3>
                     <p class="project-description">Automated inventory system for small businesses using Python and REST APIs.</p>

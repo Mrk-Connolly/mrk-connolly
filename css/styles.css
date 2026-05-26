@@ -21,6 +21,7 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 
     padding-bottom: 140px;
+    padding-top: 80px; /* space for fixed navbar */
 
     overflow-x: hidden;
 }
@@ -39,20 +40,33 @@ main {
 ========================= */
 
 .custom-navbar {
-
-    position: sticky;
-
+    position: fixed;
     top: 0;
-
-    z-index: 999;
-
-    background: rgba(238, 247, 240, 0.92);
-
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    background: rgba(238, 247, 240, 0.96);
     backdrop-filter: blur(10px);
-
     border-bottom: 1px solid rgba(143, 198, 157, 0.35);
+    padding: 12px 0;
+}
 
-    padding: 15px 0;
+.nav-inner {
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.nav-links {
+    display:flex;
+    align-items:center;
+    gap:18px;
+    flex-wrap:wrap;
 }
 
 .navbar-brand {
@@ -134,8 +148,22 @@ input:checked + .slider::before {
 ========================= */
 
 .hero {
+    padding-top: 40px;
+}
 
-    padding-top: 120px;
+.hero-inner {
+    max-width:1200px;
+    margin:0 auto;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:40px;
+    padding:0 20px;
+    flex-wrap:wrap;
+}
+
+.hero-content {
+    text-align:center;
 }
 
 .profile-image {
@@ -464,10 +492,12 @@ input:checked + .slider::before {
 }
 
 .filter-group {
-
-    margin-bottom: 40px;
-
+    margin-bottom: 56px; /* increased spacing between groups */
     text-align: center;
+}
+
+.filter-group + .filter-group {
+    margin-top: 8px;
 }
 
 .filter-title {
@@ -585,6 +615,16 @@ input:checked + .slider::before {
     font-weight: bold;
 }
 
+/* Projects grid layout (moved from inline) */
+.projects-grid {
+    display: grid;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+}
+
 /* =========================
    FOOTER
 ========================= */
@@ -597,7 +637,7 @@ footer {
 
     width: 100%;
 
-    background: rgba(244, 240, 229, 0.95);
+    background: #e8f7ec; /* light green */
 
     backdrop-filter: blur(12px);
 
@@ -614,7 +654,7 @@ footer p {
 
     margin: 4px;
 
-    color: #d9d9d9;
+    color: #2e3d31;
 
     font-size: 0.95rem;
 }
