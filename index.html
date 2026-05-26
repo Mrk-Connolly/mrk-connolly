@@ -1,8 +1,69 @@
-<!-- =========================
-     FILTERS
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Marcos Connolly</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <nav class="custom-navbar">
+        <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0 20px;flex-wrap:wrap;gap:18px;">
+            <div class="navbar-brand">Marcos Connolly</div>
+            <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap;">
+                <a class="nav-link nav-about" href="#about">About</a>
+                <a class="nav-link nav-timeline" href="#timeline">Timeline</a>
+                <a class="nav-link nav-projects" href="#projects">Projects</a>
+                <a class="nav-link nav-contact" href="#contact">Contact</a>
+                <button id="language-toggle" type="button">ES</button>
+            </div>
+        </div>
+    </nav>
 
-<div class="filters-container">
+    <main>
+        <section class="hero section-dark">
+            <div style="max-width:1200px;margin:0 auto;display:flex;align-items:center;gap:40px;padding:0 20px;flex-wrap:wrap;">
+                <img class="profile-image" src="assets/img/portfolio/thumbnails/1.jpg" alt="Profile image" />
+                <div class="hero-content">
+                    <h1 class="hero-name">Marcos Connolly</h1>
+                    <p class="hero-role">Backend Developer & Automation Engineer</p>
+                    <p class="hero-description intro-text">Passionate developer focused on backend, automation and scalable web solutions.</p>
+                    <div class="hero-info"><span style="color:#00c896;">•</span> Based in Belfast, Northern Ireland</div>
+                    <div class="hero-info"><span style="color:#00c896;">•</span> Python, JavaScript, Java, PHP</div>
+                    <div class="hero-buttons" style="margin-top:24px;display:flex;gap:16px;flex-wrap:wrap;">
+                        <a class="btn-success" href="#projects">View projects</a>
+                        <a class="btn-outline-light" href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="section-dark">
+            <div class="section-title about-title">About Me</div>
+            <p class="about-description about-text">I am a passionate software developer with strong interest in backend development, scalable systems and modern web applications.</p>
+        </section>
+
+        <section id="timeline" class="section-dark">
+            <div class="section-title timeline-title">My Journey</div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2024</h3>
+                        <p>Building backend services, automation tools, and scalable web solutions.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>2023</h3>
+                        <p>Focused on internships and personal projects using Python and JavaScript.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="section-dark">
+            <div class="section-title projects-title">My Projects</div>
+            <div class="filters-container">
 
     <!-- ROLE FILTER -->
     <div class="filter-group">
@@ -94,3 +155,36 @@
     </div>
 
 </div>
+
+            <div style="display:grid;gap:24px;max-width:1200px;margin:0 auto;padding:0 20px;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));">
+                <div class="project-card project-box" data-role="application" data-language="python">
+                    <h3>Inventory Automator</h3>
+                    <p class="project-description">Automated inventory system for small businesses using Python and REST APIs.</p>
+                    <span class="project-tag">Python</span>
+                </div>
+                <div class="project-card project-box" data-role="webpage" data-language="javascript">
+                    <h3>Portfolio Website</h3>
+                    <p class="project-description">Responsive portfolio site built with modern JavaScript and custom styling.</p>
+                    <span class="project-tag">JavaScript</span>
+                </div>
+                <div class="project-card project-box" data-role="ecommerce" data-language="php">
+                    <h3>Ecommerce Dashboard</h3>
+                    <p class="project-description">Analytics dashboard for ecommerce stores with PHP backend integration.</p>
+                    <span class="project-tag">PHP</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="section-dark">
+            <div class="section-title">Contact</div>
+            <p class="about-description">Feel free to reach out by email or LinkedIn. I am available for backend, automation, and web development work.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 Marcos Connolly. Built with HTML, CSS, and JavaScript.</p>
+    </footer>
+
+    <script src="js/scripts.js" defer></script>
+</body>
+</html>

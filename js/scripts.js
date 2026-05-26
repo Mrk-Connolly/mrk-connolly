@@ -64,6 +64,9 @@ document
                 ? "es"
                 : "en";
 
+        document.getElementById("language-toggle").textContent =
+            currentLanguage === "en" ? "ES" : "EN";
+
         document.documentElement.lang =
             currentLanguage;
 
