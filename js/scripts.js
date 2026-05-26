@@ -55,17 +55,14 @@ const translations = {
 
 let currentLanguage = "en";
 
-document
-    .getElementById("language-toggle")
-    .addEventListener("click", () => {
+const languageToggle = document.getElementById("language-toggle");
 
-        currentLanguage =
-            currentLanguage === "en"
-                ? "es"
-                : "en";
+languageToggle.addEventListener("change", () => {
 
-        document.getElementById("language-toggle").textContent =
-            currentLanguage === "en" ? "ES" : "EN";
+        currentLanguage = languageToggle.checked ? "es" : "en";
+
+        document.querySelector(".switch-text").textContent =
+            currentLanguage === "en" ? "EN" : "ES";
 
         document.documentElement.lang =
             currentLanguage;

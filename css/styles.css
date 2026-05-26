@@ -14,14 +14,9 @@
 
 body {
 
-    background: linear-gradient(
-        180deg,
-        #07140f 0%,
-        #0b1f19 50%,
-        #101820 100%
-    );
+    background: radial-gradient(circle at top, #eef5ea 0%, #f8f4e8 100%);
 
-    color: white;
+    color: #2e3d31;
 
     font-family: Arial, Helvetica, sans-serif;
 
@@ -36,11 +31,11 @@ body {
 
 .custom-navbar {
 
-    background: rgba(0, 0, 0, 0.75);
+    background: rgba(238, 247, 240, 0.92);
 
     backdrop-filter: blur(10px);
 
-    border-bottom: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(143, 198, 157, 0.35);
 
     padding: 15px 0;
 }
@@ -49,45 +44,72 @@ body {
 
     font-size: 1.3rem;
 
-    color: #00c896 !important;
+    color: #3d7251 !important;
 }
 
 .nav-link {
 
-    color: white !important;
+    color: #2e3d31 !important;
 
     transition: 0.3s;
 }
 
 .nav-link:hover {
 
-    color: #00c896 !important;
+    color: #5d8f6a !important;
 }
 
 /* =========================
-   LANGUAGE BUTTON
+   LANGUAGE SWITCH
 ========================= */
 
-#language-toggle {
+.switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+}
 
-    border-radius: 30px;
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
 
-    padding: 8px 18px;
-
-    font-weight: bold;
-
-    background: #00c896;
-
-    border: none;
-
+.slider {
+    position: relative;
+    width: 48px;
+    height: 26px;
+    background: rgba(143, 198, 157, 0.35);
+    border-radius: 34px;
     transition: 0.3s;
 }
 
-#language-toggle:hover {
+.slider::before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    left: 4px;
+    top: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.12);
+}
 
-    transform: scale(1.05);
+input:checked + .slider {
+    background: #8fc69d;
+}
 
-    background: #00e0a7;
+input:checked + .slider::before {
+    transform: translateX(22px);
+}
+
+.switch-text {
+    font-weight: bold;
+    color: #3d7251;
 }
 
 /* =========================
@@ -109,11 +131,11 @@ body {
 
     border-radius: 50%;
 
-    border: 5px solid #00c896;
+    border: 5px solid #8fc69d;
 
     box-shadow:
-        0px 0px 30px rgba(0, 200, 150, 0.35),
-        0px 0px 60px rgba(0, 200, 150, 0.15);
+        0px 0px 30px rgba(143, 198, 157, 0.35),
+        0px 0px 60px rgba(143, 198, 157, 0.2);
 
     transition: 0.4s;
 }
@@ -139,7 +161,7 @@ body {
 
 .hero-role {
 
-    color: #00c896;
+    color: #3d7251;
 
     font-size: 2rem;
 
@@ -152,7 +174,7 @@ body {
 
     line-height: 1.8;
 
-    color: #cfcfcf;
+    color: #4d6b56;
 
     margin-bottom: 25px;
 
@@ -165,12 +187,12 @@ body {
 
     margin-bottom: 10px;
 
-    color: #e6e6e6;
+    color: #36513b;
 }
 
 .hero-info i {
 
-    color: #00c896;
+    color: #8fc69d;
 
     margin-right: 10px;
 }
@@ -186,7 +208,9 @@ body {
 
 .btn-success {
 
-    background: #00c896 !important;
+    background: #8fc69d !important;
+
+    color: #143921 !important;
 
     border: none !important;
 
@@ -201,7 +225,7 @@ body {
 
 .btn-success:hover {
 
-    background: #00e0a7 !important;
+    background: #76b783 !important;
 
     transform: translateY(-3px);
 }
@@ -213,6 +237,12 @@ body {
     padding: 12px 28px !important;
 
     transition: 0.3s !important;
+
+    border: 1px solid #8fc69d !important;
+
+    color: #143921 !important;
+
+    background: rgba(255,255,255,0.9) !important;
 }
 
 .btn-outline-light:hover {
@@ -237,7 +267,7 @@ body {
 
     font-size: 3rem;
 
-    color: #00c896;
+    color: #3d7251;
 
     font-weight: bold;
 }
@@ -258,7 +288,7 @@ body {
 
     line-height: 2.2;
 
-    color: #d6d6d6;
+    color: #4f5e4f;
 }
 
 /* =========================
@@ -282,7 +312,7 @@ body {
 
     width: 4px;
 
-    background: #00c896;
+    background: #8fc69d;
 
     top: 0;
 
@@ -314,29 +344,30 @@ body {
 
 .timeline-content {
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.92);
 
     backdrop-filter: blur(10px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(143,198,157,0.45);
 
     padding: 30px;
 
     border-radius: 20px;
 
     transition: 0.3s;
+    color: #2e3d31;
 }
 
 .timeline-content:hover {
 
     transform: translateY(-5px);
 
-    border-color: #00c896;
+    border-color: #8fc69d;
 }
 
 .timeline-content h3 {
 
-    color: #00c896;
+    color: #3d7251;
 
     margin-bottom: 15px;
 }
@@ -361,7 +392,7 @@ body {
 
     margin-bottom: 20px;
 
-    color: #00c896;
+    color: #3d7251;
 
     font-size: 1.4rem;
 
@@ -387,9 +418,9 @@ body {
 
     border-radius: 30px;
 
-    background: rgba(255,255,255,0.05);
+    background: rgba(143,198,157,0.18);
 
-    color: white;
+    color: #2e3d31;
 
     backdrop-filter: blur(10px);
 
@@ -399,9 +430,9 @@ body {
 .filter-btn:hover,
 .filter-btn.active {
 
-    background: #00c896;
+    background: #8fc69d;
 
-    color: black;
+    color: #11321d;
 
     transform: translateY(-2px);
 }
@@ -412,11 +443,11 @@ body {
 
 .project-box {
 
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.95);
 
     backdrop-filter: blur(10px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(143,198,157,0.45);
 
     padding: 30px;
 
@@ -431,22 +462,22 @@ body {
 
     transform: translateY(-10px);
 
-    border-color: #00c896;
+    border-color: #8fc69d;
 
     box-shadow:
-        0px 0px 25px rgba(0, 200, 150, 0.2);
+        0px 0px 25px rgba(143, 198, 157, 0.2);
 }
 
 .project-box h3 {
 
     margin-bottom: 20px;
 
-    color: #00c896;
+    color: #3d7251;
 }
 
 .project-description {
 
-    color: #d8d8d8;
+    color: #4f5e4f;
 
     line-height: 1.8;
 }
@@ -461,9 +492,9 @@ body {
 
     padding: 6px 16px;
 
-    background: #00c896;
+    background: #8fc69d;
 
-    color: black;
+    color: #11321d;
 
     border-radius: 20px;
 
@@ -484,11 +515,11 @@ footer {
 
     width: 100%;
 
-    background: rgba(5, 15, 12, 0.75);
+    background: rgba(244, 240, 229, 0.95);
 
     backdrop-filter: blur(12px);
 
-    border-top: 1px solid rgba(255,255,255,0.08);
+    border-top: 1px solid rgba(143,198,157,0.4);
 
     text-align: center;
 
