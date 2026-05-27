@@ -177,9 +177,10 @@ main {
   transition: all 0.2s ease;
   font-family: sans-serif;
   background: #888;
-  width: 5.4em;
-  height: 2.3em;
+  width: 5.6em;
+  height: 2.4em;
   border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.12), 0 3px 12px rgba(0, 0, 0, 0.12);
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after,
@@ -190,21 +191,42 @@ main {
   width: 100%;
   text-align: center;
   position: absolute;
-  line-height: 2.3em;
+  line-height: 2.4em;
   font-size: 0.9rem;
   font-weight: bold;
   color: #fff;
   text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+  border-radius: 999px;
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after {
   left: 100%;
   content: attr(data-tg-on);
+  background: linear-gradient(
+    90deg,
+    #d52b1e 0%,
+    #d52b1e 30%,
+    #ffc400 30%,
+    #ffc400 70%,
+    #d52b1e 70%,
+    #d52b1e 100%
+  );
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
   left: 0;
   content: attr(data-tg-off);
+  background: linear-gradient(
+    90deg,
+    #00247d 0%,
+    #00247d 28%,
+    #ffffff 28%,
+    #ffffff 46%,
+    #cf142b 46%,
+    #cf142b 74%,
+    #ffffff 74%,
+    #ffffff 100%
+  );
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active {
