@@ -30,9 +30,11 @@ main {
 
     width: 100%;
 
-    max-width: 1200px;
+    max-width: 900px;
 
     margin: 0 auto;
+
+    padding: 0 20px;
 }
 
 /* =========================
@@ -123,10 +125,10 @@ main {
     width: 26px;
     left: 4px;
     top: 4px;
-    background: white;
+    background: transparent;
     border-radius: 50%;
     transition: 0.3s;
-    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.14);
+    z-index: 2;
 }
 
 .slider::after {
@@ -136,8 +138,9 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.1rem;
+    font-size: 1.8rem;
     pointer-events: none;
+    transition: 0.3s;
 }
 
 .switch input:checked + .slider {
@@ -150,6 +153,10 @@ main {
 
 .switch input:not(:checked) + .slider::after {
     content: "🇬🇧";
+}
+
+.switch input:checked + .slider {
+    background: #8fc69d;
 }
 
 .switch input:checked + .slider::after {
@@ -404,14 +411,23 @@ main {
 
     gap: 20px;
 
-    flex-wrap: wrap;
+    position: relative;
 
     margin-bottom: 24px;
 }
 
 .timeline-left {
 
-    max-width: calc(100% - 140px);
+    flex: 1;
+}
+
+.timeline-image-wrapper {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
 }
 
 .timeline-image {
@@ -451,7 +467,13 @@ main {
 
 .timeline-item-date {
 
-    display: inline-flex;
+    position: absolute;
+
+    top: 0;
+
+    right: 0;
+
+    display: flex;
 
     align-items: center;
 
@@ -474,13 +496,22 @@ main {
 
     width: 120px;
 
-    height: 90px;
+    max-width: 100%;
+
+    height: auto;
+
+    aspect-ratio: 1;
 
     border-radius: 18px;
 
     object-fit: cover;
 
     border: 1px solid rgba(143, 198, 157, 0.45);
+}
+
+.timeline-image-wrapper {
+
+    margin-bottom: 16px;
 }
 
 .timeline-content p {
