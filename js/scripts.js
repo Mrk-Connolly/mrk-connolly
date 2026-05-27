@@ -32,7 +32,8 @@ const translations = {
             program: "Program",
             ecommerce: "Ecommerce",
             games: "Games",
-            webpage: "Webpage"
+            webpage: "Webpage",
+            ai: "AI"
         },
 
         languageFilterOptions: {
@@ -77,7 +78,8 @@ const translations = {
             program: "Programa",
             ecommerce: "Ecommerce",
             games: "Juegos",
-            webpage: "Página web"
+            webpage: "Página web",
+            ai: "AI"
         },
 
         languageFilterOptions: {
