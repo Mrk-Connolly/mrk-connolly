@@ -545,46 +545,29 @@ main {
 
 .timeline-item-date {
 
-    position: absolute;
+    position: relative;
 
-    top: -14px;
-
-    right: 0;
-
-    display: flex;
+    display: inline-flex;
 
     align-items: center;
 
     justify-content: center;
 
-    padding: 8px 14px;
+    padding: 6px 16px;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
-    background: #e8f7ec;
+    background: #8fc69d;
 
-    color: #3d7251;
+    color: #11321d;
 
-    font-weight: 600;
+    font-weight: bold;
 
-    font-size: 0.95rem;
-
-    z-index: 1;
-    width: 120px;
-
-    max-width: 100%;
-
-    height: auto;
-
-    aspect-ratio: 1;
-
-    border-radius: 18px;
-
-    object-fit: cover;
+    font-size: 0.9rem;
 
     border: 1px solid rgba(143, 198, 157, 0.45);
-}
 
+    white-space: nowrap;
 .timeline-image-wrapper {
 
     margin-bottom: 16px;
