@@ -514,7 +514,7 @@ main {
 
     position: absolute;
 
-    top: 0;
+    top: -14px;
 
     right: 0;
 
@@ -535,10 +535,8 @@ main {
     font-weight: 600;
 
     font-size: 0.95rem;
-}
 
-.timeline-image {
-
+    z-index: 1;
     width: 120px;
 
     max-width: 100%;
