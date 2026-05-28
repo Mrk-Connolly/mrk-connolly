@@ -69,12 +69,12 @@ main {
     align-items:center;
     gap:18px;
     flex-wrap:wrap;
-    flex: 1;
-    justify-content: center;
+    margin-left: auto;
 }
 
 .checkbox-wrapper-8 {
-    margin-left: auto;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-brand {
