@@ -193,13 +193,13 @@ main {
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after {
   left: 100%;
   content: "";
-  background-image: url('../assets/img/flags/reino-unido.png');
+  background-image: url('../assets/img/flags/ENG.png');
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
   left: 0;
   content: "";
-  background-image: url('../assets/img/flags/espana.png');
+  background-image: url('../assets/img/flags/ESP.png');
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active {
