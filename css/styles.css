@@ -263,14 +263,22 @@ main {
     margin:0 auto;
     display:flex;
     align-items:center;
-    justify-content:center;
+    justify-content:space-between;
     gap:40px;
     padding:0 20px;
-    flex-wrap:wrap;
+    flex-wrap:nowrap;
+    flex-direction: row;
 }
 
 .hero-content {
-    text-align:center;
+    text-align:left;
+    flex: 1;
+    order: -1;
+}
+
+.stack {
+    flex: 1;
+    order: 1;
 }
 
 .profile-image {
@@ -309,6 +317,7 @@ main {
     font-weight: bold;
 
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .hero-role {
@@ -318,6 +327,8 @@ main {
     font-size: 2rem;
 
     margin-bottom: 25px;
+    text-align: left;
+}
 }
 
 .hero-description {
