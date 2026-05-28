@@ -175,55 +175,61 @@ main {
   transition: all 0.2s ease;
   font-family: sans-serif;
   background: #888;
+  display: flex;
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after,
-  .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
-  transform: skew(10deg);
-  display: inline-block;
-  transition: all 0.2s ease;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+/* Flag styles */
+.flag {
   position: absolute;
+  width: 50%;
+  height: 100%;
+  transform: skew(10deg);
+  transition: all 0.2s ease;
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after {
-  left: 100%;
-  content: "";
-  background-image: url('../assets/img/flags/ENG.png');
-}
-
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
+/* Spanish flag - Red/Yellow/Red horizontal stripes */
+.flag-es {
   left: 0;
-  content: "";
-  background-image: url('../assets/img/flags/ESP.png');
+  background: linear-gradient(180deg, #c60b1e 25%, #ffc400 25%, #ffc400 75%, #c60b1e 75%);
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active {
-  background: #888;
+/* English flag - White with red cross */
+.flag-en {
+  left: 100%;
+  background: white;
+  position: relative;
 }
 
-.checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active:before {
-  left: -10%;
+.flag-en::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: #c8102e;
+  top: 40%;
+  left: 0;
 }
 
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn {
+.flag-en::after {
+  content: '';
+  position: absolute;
+  width: 20%;
+  height: 100%;
+  background: #c8102e;
+  top: 0;
+  left: 40%;
+}
+
+.checkbox-wrapper-8 .tgl:checked + .tgl-btn {
   background: #86d993;
 }
 
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:before {
-  left: -100%;
-}
-
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:after {
+.checkbox-wrapper-8 .tgl:checked + .tgl-btn .flag-en {
   left: 0;
 }
 
-.checkbox-wrapper-8 .tgl-skewed:checked + .tgl-btn:active:after {
-  left: 10%;
+.checkbox-wrapper-8 .tgl:checked + .tgl-btn .flag-es {
+  left: -100%;
 }
 
 /* =========================
