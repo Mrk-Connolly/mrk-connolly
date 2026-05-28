@@ -58,9 +58,8 @@ main {
     margin:0 auto;
     display:flex;
     align-items:center;
-    justify-content:space-between;
+    justify-content:flex-start;
     padding:0 20px;
-    flex-wrap:wrap;
     gap:18px;
 }
 
@@ -184,22 +183,21 @@ main {
   display: inline-block;
   transition: all 0.2s ease;
   width: 100%;
-  text-align: center;
+  height: 100%;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
   position: absolute;
-  line-height: 2em;
-  font-weight: bold;
-  color: #fff;
-  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:after {
   left: 100%;
-  content: attr(data-tg-on);
+  content: "";
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:before {
   left: 0;
-  content: attr(data-tg-off);
+  content: "";
 }
 
 .checkbox-wrapper-8 .tgl-skewed + .tgl-btn:active {
