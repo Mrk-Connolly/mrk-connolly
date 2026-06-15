@@ -55,16 +55,31 @@ a {
   display: flex;
   gap: 18px;
   flex-wrap: wrap;
+  align-items: center;
 }
 
-.site-nav a {
+.site-nav a,
+.site-nav .lang-button {
   font-size: 0.95rem;
   color: #2e3d31;
-  transition: color 0.2s ease;
+  transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .site-nav a:hover {
   color: #5d8f6a;
+}
+
+.lang-button {
+  border: 1px solid rgba(46, 61, 49, 0.2);
+  background: transparent;
+  padding: 10px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.lang-button:hover {
+  background: rgba(93, 143, 106, 0.08);
+  border-color: rgba(93, 143, 106, 0.3);
 }
 
 main {
@@ -102,7 +117,8 @@ main {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 520px;
+  max-width: 460px;
+  margin-left: clamp(24px, 5vw, 80px);
 }
 
 .hero-intro {
