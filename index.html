@@ -7,18 +7,34 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <!-- Page header: logo on the left, section menu on the right -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#hero" class="brand">
+        <img src="assets/img/icon/UCMIcon.png" alt="Logo" class="logo" />
+        <span>mrk software</span>
+      </a>
+      <nav class="site-nav">
+        <a href="#about">About</a>
+        <a href="#timeline">My Journey</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
   <main>
-    <!-- Hero section: name, profile image, and short role description -->
-    <section class="hero">
-      <div class="section-inner">
-        <img src="assets/img/icon/UCMIcon.png" alt="Profile image" class="profile-image" />
+    <!-- Main hero screen with background image and name/title on the left -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <p class="hero-intro">Hello, I'm</p>
         <h1>Marcos Connolly</h1>
-        <p>Backend Developer & Automation Engineer</p>
+        <p class="hero-role">Backend Developer & Automation Engineer</p>
       </div>
     </section>
 
     <!-- About section: concise personal summary -->
-    <section id="about">
+    <section id="about" class="section-block">
       <div class="section-inner">
         <h2>About Me</h2>
         <p>Passionate software developer focused on backend, automation and scalable web solutions.</p>
@@ -26,7 +42,7 @@
     </section>
 
     <!-- Journey section: overview of experience and milestones -->
-    <section id="timeline">
+    <section id="timeline" class="section-block">
       <div class="section-inner">
         <h2>My Journey</h2>
         <p>Sharing the milestones that shaped my experience with development and automation.</p>
@@ -34,7 +50,7 @@
     </section>
 
     <!-- Projects section: short portfolio introduction -->
-    <section id="projects">
+    <section id="projects" class="section-block">
       <div class="section-inner">
         <h2>My Projects</h2>
         <p>Projects range from backend services to automation tooling and web applications.</p>
@@ -42,7 +58,7 @@
     </section>
 
     <!-- Contact section: call to action for communication and blog updates -->
-    <section id="contact">
+    <section id="contact" class="section-block">
       <div class="section-inner">
         <h2>Contact & Blog</h2>
         <p>Interested in collaborating or learning more? Reach out for updates and blog posts.</p>
@@ -50,7 +66,14 @@
     </section>
   </main>
 
-  <!-- JavaScript is optional for this page layout. The file is included for future use. -->
+  <!-- Footer with direct contact details -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span>Phone: +44 7123 456789</span>
+      <span>Email: hello@mrkconnolly.com</span>
+    </div>
+  </footer>
+
   <script src="js/scripts.js"></script>
 </body>
 </html>

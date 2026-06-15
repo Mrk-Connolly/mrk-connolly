@@ -12,73 +12,161 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Container for the page content */
-main {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 40px 20px;
+a {
+  color: inherit;
+  text-decoration: none;
 }
 
-/* Each section is separated by vertical space and a subtle divider */
-section {
-  padding: 40px 0;
+/* Header with logo and navigation */
+.site-header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: rgba(244, 242, 238, 0.96);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(46, 61, 49, 0.12);
+  z-index: 10;
+}
+
+.header-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 18px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: bold;
+}
+
+.logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.site-nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.site-nav a {
+  font-size: 0.95rem;
+  color: #2e3d31;
+  transition: color 0.2s ease;
+}
+
+.site-nav a:hover {
+  color: #5d8f6a;
+}
+
+main {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Full hero section with image background */
+.hero {
+  min-height: calc(100vh - 110px);
+  display: flex;
+  align-items: center;
+  padding: 100px 24px 60px;
+  background-image:
+    linear-gradient(180deg, rgba(16, 33, 26, 0.65), rgba(16, 33, 26, 0.30)),
+    url('assets/img/icon/UCMIcon.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f7f6f2;
+}
+
+.hero-content {
+  max-width: 520px;
+}
+
+.hero-intro {
+  font-size: 1rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+.hero h1 {
+  font-size: clamp(2.75rem, 5vw, 4.5rem);
+  margin-bottom: 20px;
+  line-height: 1.05;
+}
+
+.hero-role {
+  font-size: 1.1rem;
+  max-width: 420px;
+  line-height: 1.65;
+}
+
+.section-block {
+  padding: 72px 24px;
   border-bottom: 1px solid rgba(46, 61, 49, 0.12);
 }
 
-/* Remove border on the last section */
-section:last-child {
-  border-bottom: none;
-}
-
-/* Inner wrapper keeps text aligned and centered within sections */
 .section-inner {
   max-width: 780px;
   margin: 0 auto;
 }
 
-/* Hero section style: centered profile at the top */
-.hero {
-  text-align: center;
-  padding-top: 80px;
-  padding-bottom: 60px;
-}
-
-/* Simple circular profile image styling */
-.profile-image {
-  width: 160px;
-  height: 160px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 0 auto 24px;
-  display: block;
-}
-
-/* Headline styles */
-h1 {
-  font-size: 2.5rem;
+.section-block h2 {
+  font-size: 2rem;
   margin-bottom: 16px;
 }
 
-/* Section titles */
-h2 {
-  font-size: 1.75rem;
-  margin-bottom: 12px;
-}
-
-/* Paragraph styling for readability */
-p {
-  max-width: 40rem;
+.section-block p {
+  max-width: 43rem;
   color: #465347;
-  line-height: 1.7;
+  line-height: 1.8;
 }
 
-/* Responsive font scaling for smaller screens */
-@media (max-width: 640px) {
-  h1 {
-    font-size: 2rem;
+.site-footer {
+  background: #e9e6dd;
+  padding: 20px 24px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  color: #2e3d31;
+  font-size: 0.95rem;
+}
+
+@media (max-width: 800px) {
+  .header-inner {
+    flex-direction: column;
+    align-items: flex-start;
   }
 
-  h2 {
-    font-size: 1.5rem;
+  .hero {
+    padding-top: 140px;
+    min-height: 60vh;
+  }
+}
+
+@media (max-width: 560px) {
+  .site-nav {
+    width: 100%;
+    justify-content: flex-start;
+    gap: 12px;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
   }
 }

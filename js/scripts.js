@@ -1,8 +1,7 @@
 /*
-  This JavaScript file is intentionally minimal.
-  No interactive behavior is required for the current page layout.
-  Keep this file for future enhancements, such as animations,
-  section navigation, or content updates.
+  JavaScript is not required for the current static page layout.
+  Keep this file in place for future enhancements such as smooth scrolling,
+  section animation, or dynamic content updates.
 */
 
-// Placeholder for future scripts.
+// Placeholder for future page scripts.
