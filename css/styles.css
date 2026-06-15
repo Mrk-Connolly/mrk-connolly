@@ -75,6 +75,11 @@ main {
 /* Full hero section with image background */
 .hero {
   position: relative;
+  width: 100vw;
+  left: 50%;
+  right: 50%;
+  margin-left: -50vw;
+  margin-right: -50vw;
   min-height: calc(100vh - 110px);
   display: flex;
   align-items: center;
