@@ -117,8 +117,9 @@ main {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 460px;
-  margin-left: clamp(24px, 5vw, 80px);
+  max-width: 420px;
+  width: min(420px, 36vw);
+  margin-left: clamp(60px, 18vw, 140px);
 }
 
 .hero-intro {
@@ -166,8 +167,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(233, 230, 221, 0.92);
-  backdrop-filter: blur(10px);
+  background: #d8d2c5;
   padding: 18px 24px;
   box-shadow: 0 -2px 16px rgba(46, 61, 49, 0.12);
 }
