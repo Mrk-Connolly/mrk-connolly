@@ -167,7 +167,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #d8d2c5;
+  background-color: #000000;
   opacity: 1;
   padding: 18px 24px;
   box-shadow: 0 -2px 16px rgba(46, 61, 49, 0.12);
@@ -180,7 +180,7 @@ main {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  color: #2e3d31;
+  color: #5ab70386;
   font-size: 0.95rem;
 }
 
@@ -212,3 +212,119 @@ body {
     font-size: 2.5rem;
   }
 }
+
+/* From Uiverse.io by PriyanshuGupta28 */ 
+.timeline-stepper-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 32px;
+  width: 800px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.timeline-stepper-step {
+  display: flex;
+  margin-bottom: 32px;
+  position: relative;
+}
+
+.timeline-stepper-step:last-child {
+  margin-bottom: 0;
+}
+
+.timeline-stepper-line {
+  position: absolute;
+  left: 19px;
+  top: 40px;
+  bottom: -32px;
+  width: 2px;
+  background-color: #000000;
+  z-index: 1;
+}
+
+.timeline-stepper-step:last-child .timeline-stepper-line {
+  display: none;
+}
+
+.timeline-stepper-circle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 16px;
+  z-index: 2;
+}
+
+
+.timeline-stepper-circle {
+  border: 2px solid #000000;
+}
+
+.timeline-stepper-content {
+  flex: 1;
+}
+
+.timeline-stepper-title {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.timeline-stepper-title {
+  color: #000000;
+}
+
+.timeline-stepper-status {
+  font-size: 13px;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 12px;
+  margin-top: 4px;
+}
+
+.timeline-stepper-completed .timeline-stepper-status {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.timeline-stepper-active .timeline-stepper-status {
+  background-color: #dbeafe;
+  color: #1d4ed8;
+}
+
+.timeline-stepper-pending .timeline-stepper-status {
+  background-color: #f1f5f9;
+  color: #64748b;
+}
+
+.timeline-stepper-time {
+  font-size: 12px;
+  color: #94a3b8;
+  margin-top: 4px;
+}
+
+.timeline-stepper-controls {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 32px;
+}
+
+.timeline-stepper-button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px solid #e2e8f0;
+  background-color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.timeline-stepper-button-primary {
+  background-color: #0f172a;
+  color: white;
+  border-color: #0f172a;
+}
+
+
