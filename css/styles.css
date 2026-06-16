@@ -141,9 +141,20 @@ main {
   line-height: 1.65;
 }
 
-.section-block {
+.section-block-white {
   padding: 72px 24px;
   border-bottom: 1px solid rgba(46, 61, 49, 0.12);
+}
+.section-block-green {
+  position: relative;
+  left: 50%;
+  right: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  margin-right: -50vw;
+  padding: 72px 24px;
+  border-bottom: 1px solid rgba(46, 61, 49, 0.12);
+  background: linear-gradient(135deg, rgba(17, 82, 36, 0.92) 0%, rgba(232, 223, 161, 0.92) 100%);
 }
 
 .section-inner {
@@ -180,7 +191,7 @@ main {
   gap: 20px;
   justify-content: center;
   flex-wrap: wrap;
-  color: #5ab70386;
+  color: #ffffff;
   font-size: 0.95rem;
 }
 
