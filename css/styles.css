@@ -167,7 +167,8 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
-  background: #d8d2c5;
+  background-color: #d8d2c5;
+  opacity: 1;
   padding: 18px 24px;
   box-shadow: 0 -2px 16px rgba(46, 61, 49, 0.12);
 }
