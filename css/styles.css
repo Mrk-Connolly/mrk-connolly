@@ -178,6 +178,7 @@ main {
   left: 0;
   right: 0;
   bottom: 0;
+  z-index: 20;
   background-color: #000000;
   opacity: 1;
   padding: 18px 24px;
@@ -235,7 +236,8 @@ body {
 
 .timeline-stepper-step {
   display: flex;
-  margin-bottom: 32px;
+  /* Content of the timeline stepper size */
+  margin-bottom: 132px;
   position: relative;
 }
 
@@ -245,12 +247,13 @@ body {
 
 .timeline-stepper-line {
   position: absolute;
-  left: 19px;
+  left: 48px;
   top: 40px;
-  bottom: -32px;
+  /* Size of Line to bottom */
+  bottom: -130px;
   width: 2px;
   background-color: #000000;
-  z-index: 1;
+  z-index: 0;
 }
 
 .timeline-stepper-step:last-child .timeline-stepper-line {
@@ -258,22 +261,43 @@ body {
 }
 
 .timeline-stepper-circle {
-  width: 40px;
-  height: 40px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-right: 16px;
   z-index: 2;
+  border: none;
+  background: white;  
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
 }
 
+.timeline-stepper-circle img {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 100%;
+  height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  border-radius: 50%;
+  z-index: 0; /* behind the circle content */
+  pointer-events: none;
+  opacity: 1; /* make logo fully visible when used as the circle */
+}
 
-.timeline-stepper-circle {
-  border: 2px solid #000000;
+.timeline-stepper-circle svg,
+.timeline-stepper-circle i {
+  position: relative;
+  z-index: 2; /* keep icons on top of the background logo */
 }
 
 .timeline-stepper-content {
+  padding-top: 20px;
   flex: 1;
 }
 
@@ -287,11 +311,30 @@ body {
 }
 
 .timeline-stepper-status {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 13px;
-  display: inline-block;
-  padding: 2px 8px;
-  border-radius: 12px;
-  margin-top: 4px;
+  padding: 6px 10px;
+  border-radius: 999px;
+  margin-top: 8px;
+  margin-right: 8px;
+  white-space: nowrap;
+}
+
+.timeline-stepper-status--soft {
+  background-color: #dcfce7;
+  color: #166534;
+}
+
+.timeline-stepper-status--hard {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.timeline-stepper-status--lang {
+  background-color: #dbeafe;
+  color: #1d4ed8;
 }
 
 .timeline-stepper-completed .timeline-stepper-status {
@@ -311,7 +354,7 @@ body {
 
 .timeline-stepper-time {
   font-size: 12px;
-  color: #94a3b8;
+  color: #24272c;
   margin-top: 4px;
 }
 
