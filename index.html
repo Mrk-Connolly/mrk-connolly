@@ -265,7 +265,7 @@
                 Una vez que la tienda se estabilizó y se encontraba en un buen estado, 
                 decidí volver a mis raíces y retomar mi carrera como desarrollador de software. Acepté unas practicas 
                 en AirTouch Media, en su subdivisión dedicado a la gestion de marketplaces que enlazan a Globo, UberEats y JustEat 
-                a los restaurantes de españa. <br><br>
+                a los restaurantes de España. <br><br>
 
                 Aquí me dedique a la inscripción de nuevos restaurantes registrados en nuestra plataforma, el diseño de los correos
                 hacia clientes y la resolución de incidencias con los restaurantes y sus clientes. Resolviendo sus dudas e arreglando y detallando
@@ -288,11 +288,33 @@
       </div>
     </section>
 
-    <!-- Projects section: short portfolio introduction -->
-    <section id="projects" class="section-block">
+    <!-- Projects section: portfolio grid with filters and pagination -->
+    <section id="projects" class="section-block section-block-white">
       <div class="section-inner">
-        <h2>My Projects</h2>
-        <p>Projects range from backend services to automation tooling and web applications.</p>
+        <div class="projects-header">
+          <div>
+            <h2>My Projects</h2>
+            <p>Projects range from backend services to automation tooling and web applications.</p>
+          </div>
+          <div class="projects-page-summary" id="projectPageSummary" aria-live="polite"></div>
+        </div>
+
+        <div class="projects-controls">
+          <div class="filter-group" aria-label="Programming language filters">
+            <span class="filter-label">Programming language</span>
+            <div class="filter-chips" id="languageFilters"></div>
+          </div>
+          <div class="filter-group" aria-label="Technologies filters">
+            <span class="filter-label">Technologies</span>
+            <div class="filter-chips" id="techFilters"></div>
+          </div>
+        </div>
+
+        <div class="projects-pagination-top" id="paginationTop"></div>
+
+        <div class="project-grid" id="projectGrid"></div>
+
+        <div class="projects-pagination-bottom" id="paginationBottom"></div>
       </div>
     </section>
 
