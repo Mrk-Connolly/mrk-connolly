@@ -263,13 +263,13 @@ main {
 }
 
 .book .contact-card-detail {
-  font-size: 0.85rem;
+  font-size: 0.7rem;
   line-height: 1.4;
 }
 
 .book .contact-card-detail strong {
   display: block;
-  font-size: 0.88rem;
+  font-size: 0.7 rem;
 }
 
 .contact-card-icon {
@@ -300,19 +300,41 @@ main {
 .contact-form-section {
   margin-top: 48px;
   padding: 32px;
-  background: transparent;
+  background: rgba(255, 255, 255, 0.96);
   border-radius: 28px;
-  border: none;
-  box-shadow: none;
+  border: 1px solid rgba(46, 61, 49, 0.12);
+  box-shadow: 0 24px 54px rgba(15, 23, 42, 0.12);
 }
 
 .contact-form-section p {
   margin-top: 12px;
-  color: #eef5e8;
+  color: #2d3a2f;
 }
 
 .contact-form-section h3 {
   color: #164e25;
+}
+
+.direct-contact-box {
+  margin-top: 24px;
+  padding: 24px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.18);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.direct-contact-box h3 {
+  margin: 0 0 12px;
+  color: #ffffff;
+}
+
+.direct-contact-box p {
+  margin: 8px 0;
+  color: #eef5e8;
+}
+
+.direct-contact-box strong {
+  color: #ffffff;
 }
 
 .contact-form {
@@ -340,22 +362,42 @@ main {
 }
 
 .contact-recipient-option {
-  display: grid;
-  grid-template-columns: 1fr auto;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  padding: 14px 12px 14px 18px;
-  border-radius: 18px;
-  border: 1px solid rgba(255, 255, 255, 0.22);
-  background: rgba(255, 255, 255, 0.18);
-  color: #243225;
+  justify-content: center;
+  padding: 0;
+  border-radius: 999px;
+  border: 1px solid rgba(46, 61, 49, 0.16);
+  background: transparent;
+  color: #2e3d31;
+  cursor: pointer;
+  transition: border-color 0.2s ease;
 }
 
 .contact-recipient-option input {
-  width: 18px;
-  height: 18px;
-  justify-self: end;
-  margin-left: 0;
+  display: none;
+}
+
+.contact-recipient-option span {
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: #f4f7f2;
+  color: #2e3d31;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.contact-recipient-option:hover span {
+  background: #d9f0dc;
+}
+
+.contact-recipient-option input:checked + span {
+  background: #14532d;
+  color: #ffffff;
+  border: 1px solid #14532d;
 }
 
 .contact-form-row {
