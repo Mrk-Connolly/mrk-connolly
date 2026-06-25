@@ -361,8 +361,55 @@ function initProjectsSection() {
   renderProjects();
 }
 
+function initContactForm() {
+  const contactForm = document.getElementById("contactForm");
+  if (!contactForm) {
+    return;
+  }
+
+  const recipientCheckboxes = Array.from(contactForm.querySelectorAll('input[name="recipient"]'));
+  recipientCheckboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {
+      if (checkbox.checked) {
+        recipientCheckboxes.forEach((other) => {
+          if (other !== checkbox) {
+            other.checked = false;
+          }
+        });
+      }
+    });
+  });
+
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formData = new FormData(contactForm);
+    const name = formData.get("name")?.toString().trim();
+    const email = formData.get("email")?.toString().trim();
+    const message = formData.get("message")?.toString().trim();
+    const selectedRecipient = recipientCheckboxes.find((checkbox) => checkbox.checked)?.value;
+
+    if (!name || !email || !message) {
+      alert("Please complete all fields before sending your message.");
+      return;
+    }
+
+    if (!selectedRecipient) {
+      alert("Please select one email recipient before sending.");
+      return;
+    }
+
+    const subject = encodeURIComponent(`Contact from ${name}`);
+    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+    window.location.href = `mailto:${selectedRecipient}?subject=${subject}&body=${body}`;
+  });
+}
+
 if (document.readyState === "loading") {
-  document.addEventListener("DOMContentLoaded", initProjectsSection);
+  document.addEventListener("DOMContentLoaded", () => {
+    initProjectsSection();
+    initContactForm();
+  });
 } else {
   initProjectsSection();
+  initContactForm();
 }

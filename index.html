@@ -357,20 +357,89 @@
     </section>
 
     <!-- Contact section: call to action for communication and blog updates -->
-    <section id="contact" class="section-block">
+    <section id="contact" class="section-block-green">
       <div class="section-inner">
-        <h2>Contact & Blog</h2>
-        <p>Interested in collaborating or learning more? Reach out for updates and blog posts.</p>
-      </div>
-    </section>
+        <div class="contact-header">
+          <h2>Contact & Blog</h2>
+          <p>Interested in collaborating or learning more? Reach out for updates, blog posts, or a quick message.</p>
+        </div>
 
-    <!-- Direct contact section with phone and email details -->
-    <section id="direct-contact" class="section-block">
-      <div class="section-inner">
-        <h2>Contact Me Directly</h2>
-        <p>Phone: <strong>+34 690 22 04 51</strong></p>
-        <p>Email: <strong>mrk.c.software@gmail.com</strong></p>
-        <p>Email: <strong>marcosconnolly10@gmail.com</strong></p>
+        <div class="contact-cards">
+          <article class="book" tabindex="0">
+            <div class="cover">
+              <div class="cover__front">
+                <p class="contact-card-title">Email</p>
+                <p class="contact-card-detail">Hover to open</p>
+              </div>
+            </div>
+            <div class="book__content">
+              <p class="contact-card-title">My Email</p>
+              <p class="contact-card-detail"><strong>mrk.c.software@gmail.com</strong><br><strong>marcosconnolly10@gmail.com</strong></p>
+            </div>
+          </article>
+
+          <article class="book" tabindex="0">
+            <div class="cover">
+              <div class="cover__front">
+                <p class="contact-card-title">Phone</p>
+                <p class="contact-card-detail">Hover to open</p>
+              </div>
+            </div>
+            <div class="book__content">
+              <p class="contact-card-title">My Phone</p>
+              <p class="contact-card-detail"><strong>+34 690 22 04 51</strong></p>
+            </div>
+          </article>
+
+          <article class="book" tabindex="0">
+            <div class="cover">
+              <div class="cover__front">
+                <p class="contact-card-title">Address</p>
+                <p class="contact-card-detail">Hover to open</p>
+              </div>
+            </div>
+            <div class="book__content">
+              <p class="contact-card-title">Home Address</p>
+              <p class="contact-card-detail">Calle José de Salamanca, 4<br>28009 Madrid, España</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="contact-form-section">
+          <h3>Send me a message</h3>
+          <p>Have a question or project idea? Use the form below to send an email directly from the page and I’ll get back to you shortly.</p>
+          <form id="contactForm" class="contact-form" novalidate>
+            <div class="contact-form-recipient">
+              <span class="contact-form-label">Choose email recipient:</span>
+              <div class="contact-recipient-options">
+                <label class="contact-recipient-option">
+                  <input type="checkbox" name="recipient" value="mrk.c.software@gmail.com" checked />
+                  <span>mrk.c.software@gmail.com</span>
+                </label>
+                <label class="contact-recipient-option">
+                  <input type="checkbox" name="recipient" value="marcosconnolly10@gmail.com" />
+                  <span>marcosconnolly10@gmail.com</span>
+                </label>
+              </div>
+            </div>
+            <div class="contact-form-row">
+              <label class="contact-form-field">
+                <span>Name</span>
+                <input type="text" name="name" placeholder="Your name" required />
+              </label>
+              <label class="contact-form-field">
+                <span>Email</span>
+                <input type="email" name="email" placeholder="Your email" required />
+              </label>
+            </div>
+            <label class="contact-form-field">
+              <span>Message</span>
+              <textarea name="message" placeholder="Write your message" required></textarea>
+            </label>
+            <button type="submit">Send message</button>
+            <p class="contact-form-note">This form opens your email app with the message ready to send.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
