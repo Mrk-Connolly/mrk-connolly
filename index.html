@@ -202,7 +202,7 @@
             <div class="timeline-stepper-circle has-logo"><img src="assets/img/icon/LibreriaKaori.jpg" alt="Logo" class="timeline-logo" /></div>
             <div class="timeline-stepper-line"></div>
             <div class="timeline-stepper-content">
-              <div class="timeline-stepper-title">E-Commerce y Dirección de Negocio</div>
+              <div class="timeline-stepper-title">E-Commerce y Responsable de Negocio</div>
               <div class="timeline-stepper-time">Libreria Kaori</div>
               <div class="timeline-stepper-time">Oct 2025 - Actualidad</div>
               <div class="timeline-tags-row">
@@ -308,6 +308,10 @@
             <span class="filter-label">Technologies</span>
             <div class="filter-chips" id="techFilters"></div>
           </div>
+          <div class="filter-group" aria-label="Domain filters">
+            <span class="filter-label">Domain</span>
+            <div class="filter-chips" id="domainFilters"></div>
+          </div>
         </div>
 
         <div class="projects-pagination-top" id="paginationTop"></div>
@@ -315,6 +319,40 @@
         <div class="project-grid" id="projectGrid"></div>
 
         <div class="projects-pagination-bottom" id="paginationBottom"></div>
+
+        <div id="projectModal" class="modal hidden" aria-hidden="true" role="dialog" aria-modal="true">
+          <div class="modal__overlay" data-modal-close></div>
+          <div class="modal__window" role="document">
+            <button type="button" class="modal__close" aria-label="Close project details">×</button>
+            <div class="modal__header">
+              <div class="modal__header-logo">
+                <img id="modalLogo" src="assets/img/icon/MRKCSCircularLogoWhite.png" alt="Project logo" />
+              </div>
+              <h2 id="modalTitle"></h2>
+            </div>
+            <div class="modal__carousel">
+              <button type="button" class="carousel-button carousel-button--left" id="carouselLeft" aria-label="Show previous images">←</button>
+              <div class="carousel-wrapper">
+                <div class="carousel-track" id="carouselTrack"></div>
+              </div>
+              <button type="button" class="carousel-button carousel-button--right" id="carouselRight" aria-label="Show next images">→</button>
+            </div>
+            <div class="modal__content">
+              <div class="modal__section modal__section--wide">
+                <h3>Collaborators</h3>
+                <div id="modalCollaborators" class="modal__collaborators"></div>
+              </div>
+              <div class="modal__section modal__section--wide">
+                <h3>Languages, Technologies & Domains</h3>
+                <div id="modalTags" class="modal__tags"></div>
+              </div>
+              <div class="modal__section modal__section--wide">
+                <h3>Project description</h3>
+                <p id="modalDescription"></p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -345,6 +383,7 @@
     </div>
   </footer>
 
+  <script src="js/projects.js"></script>
   <script src="js/scripts.js"></script>
 </body>
 </html>
